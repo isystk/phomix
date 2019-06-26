@@ -1,0 +1,23 @@
+<% function pageScripts (buf) { %>
+<% }; %>
+<% function pageContent (buf) { %>
+
+	<form id="login" name="login" action="admin.login" class="socket">
+		<fieldset>
+			<legend>ログイン</legend>
+			<span class="description">パスワード忘れても教えないよ</span>
+			<p>
+				<label for="userId">ログインID</label>
+				<input type="text" name="userId" id="userId" placeholder="ログインID" autofocus="true" class="required" >
+			</p>
+			<p>
+				<label for="password">パスワード</label>
+				<input type="password" name="password" id="password" placeholder="パスワード" class="required" >
+			</p>
+			<p class="buttons"><button type="submit" class="ok">ログイン</button></p>
+		</fieldset>
+	</form>
+
+<% }; %>
+<% include layout %>
+

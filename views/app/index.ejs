@@ -1,0 +1,37 @@
+<% function pageScripts (buf) { %>
+	<script type="text/javascript" src="/js/index.js"></script>
+<% }; %>
+<% function pageContent (buf) { %>
+
+	<div id="contents" class="ctHome" ng-controller="MainCtrl">
+		<!-- メインコンテンツ-->
+		<div class="boxLeft">
+			<h2 class="title"><p>Phomix</p></h2>
+			<p class="imgMain"></p>
+			<div style="height: 420px; border:1px solid black">ここに画像コンテンツを表示</div>
+			<p></p>
+		</div>
+		<!-- 右メニュー-->
+		<div class="boxLogin">
+			<div class="frame01">
+				<div class="inner">
+					<% if (!isLogin) { %>
+					<ul class="btn">
+						<li>
+							<a href="/login/" class="btnLink">
+								<div class="button button-register imgover">利用してみる<span class="icon icon-login"></span></div>
+							</a>
+						</li>
+					</ul>
+					<% } %>
+					<p class="btnDownload">
+						<a href="#" target="_blank"><img src="/img/btn_appstore.png" alt="AppStoreでダウンロード" width="160" height="50" class="imgover"></a>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+<% }; %>
+<% include layout %>
+

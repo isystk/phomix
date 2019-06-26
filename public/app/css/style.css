@@ -1,0 +1,204 @@
+@charset "utf-8";
+
+/*** colorTown CSS Document *********************************
+
+	style.css
+
+*************************************************************/
+
+
+/*------------------------------------------------------------
+
+  トップ
+
+------------------------------------------------------------*/
+
+/* メインコンテンツ
+-----------------------------------------------------*/
+
+.ctHome .boxLeft {
+float: left;
+width: 590px;
+position: relative;
+margin: 40px 0 0 0;
+}
+
+.ctHome .logo {
+margin-top: 28px;
+}
+
+
+.ctHome .imgMain {
+margin: 40px 0 0 -40px;
+}
+
+/*------------------------------------------------------------
+
+  ログイン
+
+------------------------------------------------------------*/
+
+.ctLogin .description {
+font-size: 20px;
+float: left;
+width: 490px;
+position: relative;
+margin: 40px 0 0 0;
+}
+
+
+.boxLogin {
+float: right;
+width: 360px;
+}
+
+.boxLogin .frame01 {
+background: #ffffff;
+}
+
+.boxLogin .socialLogin {
+background: #f5f5f5;
+text-align: center;
+-webkit-border-top-left-radius: 5px;
+-webkit-border-top-right-radius: 5px;
+-moz-border-radius-topleft: 5px;
+-moz-border-radius-topright: 5px;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+padding: 10px 10px 20px 10px;
+}
+
+.boxLogin .socialLogin li {
+margin: 10px 0 0 0;
+}
+
+.boxLogin p {
+margin-left: 18px;
+}
+
+.boxLogin input[type="text"], .boxLogin input[type="email"], .ctHome .boxLogin input[type="password"] {
+background: url(../img/bg_input_top.gif) 0 0 no-repeat;
+}
+
+.boxLogin .btn {
+text-align: center;
+line-height: 0;
+}
+
+.boxLogin .btn li {
+margin: 20px 0 0 0;
+}
+
+.boxLogin .button-login-fb {
+background:#3b5998;
+font-weight:bold;
+width: 320px;
+line-height: 35px;
+margin: 0 auto;
+}
+
+.boxLogin .button-login-twitter {
+background:#00acee;
+font-weight:bold;
+width: 320px;
+line-height: 35px;
+margin: 0 auto;
+}
+
+.boxLogin .button-login {
+background:#008B8B;
+font-weight:bold;
+width: 320px;
+font-size:20px;
+line-height: 35px;
+margin: 0 auto;
+}
+
+.boxLogin .button-register {
+background:#DB7093;
+font-size:20px;
+width: 320px;
+line-height: 35px;
+margin: 0 auto;
+}
+
+#dialogBox .button-send {
+background:#008B8B;
+font-size:20px;
+width: 150px;
+line-height: 30px;
+margin: 0 auto;
+}
+
+
+/*------------------------------------------------------------
+
+  プロフィール設定
+
+------------------------------------------------------------*/
+
+.ctForm .userIcon {
+float: left;
+width: 190px
+}
+
+.ctForm .userIcon .btn {
+line-height: 0;
+margin: 10px 0 0 0;
+}
+
+.ctForm .profForm {
+float: left;
+width: 550px;
+}
+
+.ctForm .passForm {
+width: 320px;
+margin: 0 auto;
+}
+
+.ctForm .profForm textarea {
+width: 480px;
+}
+
+.ctForm .button-select {
+background:#DB7093;
+font-size:15px;
+width: 140px;
+}
+
+.ctForm .button-unselect {
+background:#008B8B;
+font-size:15px;
+width: 140px;
+}
+
+.ctForm .button-regist {
+background:#DB7093;
+font-size:20px;
+width: 320px;
+line-height: 35px;
+margin: 0 auto;
+}
+
+
+/*------------------------------------------------------------
+
+  ダイアログボックス
+
+------------------------------------------------------------*/
+
+
+/* プロフィール画像の削除
+-----------------------------------------------------*/
+
+#dialogBox .button-unselect {
+color:#ffffff;
+background:#008B8B;
+font-size:15px;
+width: 140px;
+line-height: 25px;
+margin: 0 auto;
+}
+
+

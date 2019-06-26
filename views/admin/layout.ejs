@@ -1,0 +1,62 @@
+<html lang="ja">
+	<head>
+		<meta charset="utf8">
+		<title>(local) 管理コンソール</title>
+		<meta name="description" content="{description}">
+		<link type="text/css" rel="stylesheet" href="/css/base.css">
+		<link type="text/css" rel="stylesheet" href="/css/admin.css">
+		<link type="text/css" rel="stylesheet" href="/css/jquery-ui-1.8.13.custom.css">
+		<link type="text/css" rel="stylesheet" href="/js/lib/jquery-ui/jquery-ui.custom.css">
+	</head>
+	<body class="local">
+		<!-- root -->
+		<div id="page">
+			<header>
+				<h1>管理コンソール (local)</h1>
+				<!-- status info -->
+				<div id="headStat"></div>
+				<!-- global navigation -->
+				<nav>
+					<ul>
+						<li class="user"><a href="#" data-menu="user" class="menu">ユーザー</a></li>
+						<li class="setting"><a href="#" data-menu="setting" class="menu">システム設定</a></li>
+						<li class="admin"><a href="#" data-menu="admin" class="menu">管理操作ログ</a></li>
+					</ul>
+				</nav>
+			</header>
+			<div id="content">
+				<% pageContent(buf) %>
+			</div>
+			<footer>
+				<span id="confidential">CONFIDENTIAL</span>
+				<copyright>©2012-2013 ISE INC. All rights reserved.</copyright>
+				<a href="http://www.ise-web.com/" rel="noreferer nofollow">ISE</a>
+			</footer>
+		</div>
+
+		<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+		<script type="text/javascript" src="/js/lib/date-utils.min.js"></script>
+		<script type="text/javascript" src="/js/lib/underscore.js"></script>
+		<script type="text/javascript" src="/js/lib/jsdeferred.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery-ui/jquery-ui.custom.min.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.validation.min.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.json-2.2.min.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.cookie.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.notifybar.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.form.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.facebox.js"></script>
+		<script type="text/javascript" src="/js/lib/jquery.pager.js"></script>
+		<script type="text/javascript" src="/js/common.js"></script>
+		<script type="text/javascript" src="/js/lib/tag.js"></script>
+		<script type="text/javascript" src="/js/client.js"></script>
+		<script type="text/javascript" src="/js/handler.js"></script>
+		<script type="text/javascript" src="/js/admin-form.js"></script>
+		<script type="text/javascript" src="/js/login.js"></script>
+		<script type="text/javascript" src="/js/oplog.js"></script>
+		<script type="text/javascript" src="/js/admin-handler-user.js"></script>
+		<script type="text/javascript" src="/js/admin-handler-system.js"></script>
+	</body>
+</html>
+
+

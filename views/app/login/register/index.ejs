@@ -1,0 +1,90 @@
+<% function pageScripts (buf) { %>
+	<script type="text/javascript" src="/js/login/register/index.js"></script>
+<% }; %>
+<% function pageContent (buf) { %>
+
+	<div id="contents" class="ctForm" ng-controller="MainCtrl">
+		<div class="boxForm">
+			<form action="/login/register" method="post" name="form1" >
+				<input type="hidden" name="imageId" value="" id="imageId" ng-model="user.imageId">
+				<div class="frame01">
+					<div class="inner">
+						<h1 class="captionForm01">プロフィール設定</h1>
+						<div class="boxInner">
+							<div class="userIcon">
+								<p>
+									<a href="#"><img id="profileImage" src="/img/noimage_m_sq.jpg" alt="" width="150" height="150"></a>
+								</p>
+								<p>
+									<a href="#" ng-click="profileImageUpload($event)" class="btnLink">
+										<span class="button button-select imgover">画像選択</span>
+									</a>
+								</p>
+								<p id="remove" class="display-none">
+									<a href="#" ng-click="profileImageRemove($event)" class="btnLink"><span class="button button-unselect imgover">削除</span></a>
+									<div class="removeImage display-none">
+										<form action=""><div class="boxInner">
+											<p class="txtCenter">この画像を削除してもよろしいですか？</p>
+											<p class="txtCenter"><img id="deleteProfileImage" src="/img/noimage_m_sq.jpg" alt="" width="150" height="150"></p>
+											<p class="btnForm01"><a href="#" id="remove-exec"><span class="button button-unselect imgover">削除</span></a></p>
+										</div></form>
+									</div>
+								</p>
+							</div>
+							<div class="profForm">
+								<div>
+									<label>ユーザーネーム<span class="must">*</span><br>
+										<input type="text" value="" name="name" placeholder="お名前" ng-model="user.name" required ng-maxlength="30">
+									</label>
+									<span class="txtCounter">30</span>
+									<div class="errors display-none">
+										<p ng-show="form1.name.$error.required">ユーザーネームは必須です。</p>
+										<p ng-show="form1.name.$error.maxlength">ユーザーネームは最大30文字で入力してください。</p>
+									</div>
+								</div>
+								<div>
+									<label>パスワード<span class="must">*</span><br>
+										<input type="password" value="" name="password" ng-model="user.password" required>
+									</label>
+									<div class="errors display-none">
+										<p ng-show="form1.password.$error.required">パスワードは必須です。</p>
+									</div>
+								</div>
+								<div>
+									<label>メールアドレス（非公開）<span class="must">*</span><br>
+										<input type="email" value="" name="email" ng-model="user.email" required>
+									</label>
+									<div class="errors display-none">
+										<p ng-show="form1.email.$error.required">メールアドレスは必須です。</p>
+										<p ng-show="form1.email.$error.email">メールアドレスが不正です。</p>
+									</div>
+								</div>
+								<div>
+									<label>あなたについて<br>
+										<textarea cols="30" rows="4" name="introduction" placeholder="私は、３２歳システムエンジニアです。" ng-model="user.introduction"></textarea>
+									</label>
+									<span class="txtCounter">400</span>
+								</div>
+								<div class="txtLink">
+									<a href="/html/terms.html" target="_blank">利用規約を確認（必須）</a><br>
+									<label>
+										<input type="checkbox" name="agreement" required>このサービスの利用規約に同意する
+									</label>
+									<div class="errors display-none">
+										<p ng-show="form1.agreement.$error.required">利用規約に同意してください。</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<p class="btnForm01">
+							<a href="#" ng-click="profileRegist($event)" class="btnLink"><span class="button button-regist imgover">登録する</span></a>
+						</p>
+					</div>
+				</div>
+			</form>
+		</div>
+	</div>
+
+<% }; %>
+<% include ../../layout %>
+

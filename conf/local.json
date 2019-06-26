@@ -1,0 +1,123 @@
+{
+	"piddir": "/tmp",
+	"mongodb": {
+		"hostname": "localhost",
+		"database": "phomix",
+		"schemas": [
+			{"user": {
+				"name": "String",
+				"password": "String",
+				"email": "String",
+				"introduction": "String",
+				"imageId": "Object",
+				"mailChkFlg": "Boolean",
+				"accessToken": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"user_sns": {
+				"userId": "String",
+				"snsType": "String",
+				"snsId": "String",
+				"snsName": "String",
+				"accessToken": "String",
+				"accessSecret": "String"
+			}},
+			{"onetime_password": {
+				"email": "String",
+				"termTime": "Date",
+				"registTime": "Date"
+			}},
+			{"image": {
+				"userId": "String",
+				"displayFlg": "Boolean",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"post": {
+				"userId": "String",
+				"imageId": "Object",
+				"title": "String",
+				"text": "String",
+				"tagId": "Object",
+				"displayFlg": "Boolean",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"tag": {
+				"userId": "String",
+				"name": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"user_log": {
+				"userId": "Object",
+				"kind": "String",
+				"type": "String",
+				"time": "Date",
+				"data": {}
+			}},
+			{"admin_user": {
+				"userId": "String",
+				"password": "String",
+				"name": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"admin_oplog": {
+				"name": "String",
+				"type": "String",
+				"ip": "String",
+				"time": "Date",
+				"data": {}
+			}}
+		]
+
+	},
+	"mail" : {
+		"smtp" : {
+			"host": "192.168.11.4",
+			"username": "y-ise",
+			"password": "y-ise"
+		},
+		"from" : "noreply@ise-web.com"
+	},
+	"thumbDir": "./public/thumb/",
+	"app": {
+		"host" : "http://localhost:3002",
+		"title" : "Phomix",
+		"description" : "フォト共有アプリ",
+		"port": "3002",
+		"oauth": {
+			"twitter": {
+				"consumerKey" : "U3J1dhi3xRnYEkieeVcq1A",
+				"consumerSecret" : "QnEMHPCywK04eeejyjydmgOjLfiKZZBTVwxfV0znZYM",
+				"callbackUrl" : "http://localhost:3002/login/tw/callback/"
+			},
+			"facebook": {
+				"appKey" : "592770127444295",
+				"secretKey" : "708f35b71f73b1d615ef6ea87bfccf36",
+				"callbackUrl" : "http://localhost:3002/login/fb/callback/"
+			}
+		},
+		"scripts": [
+			"/js/source/handler.js",
+			"/js/source/client.js",
+			"/js/source/common.js",
+			"/js/source/const.js"
+		]
+	},
+	"admin": {
+		"host" : "http://localhost:9002",
+		"title" : "管理コンソール",
+		"description" : "Phomixの管理コンソールです。",
+		"port": "9002",
+		"sessionBase" : "KhJ7^1jG6x=?UxoAtN>$niEmY/J5?hVbqf71",
+		"nic" : "lo0"
+	}
+}

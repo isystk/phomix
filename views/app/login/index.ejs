@@ -1,0 +1,87 @@
+<% function pageScripts (buf) { %>
+	<script type="text/javascript" src="/js/login/index.js"></script>
+<% }; %>
+<% function pageContent (buf) { %>
+
+	<div id="contents" class="ctLogin" ng-controller="MainCtrl">
+		<!-- メインコンテンツ-->
+		<div class="boxLeft">
+			<h2 class="description">
+				<p>Phomixを使うと、友達や同僚、同級生、仲間たちとつながりを深められます。ケータイ、スマートフォンからもアクセスできます。</p>
+			</h2>
+		</div>
+		<!-- 右メニュー-->
+		<div class="boxLogin">
+			<div class="frame01">
+				<div class="inner">
+					<ul class="socialLogin">
+						<li>
+							<a href="/login/fb/" class="btnLink">
+								<div class="button button-login-fb imgover">facebookアカウントでログイン<span class="icon icon-fb"></span></div>
+							</a>
+						</li>
+						<li>
+							<a href="/login/tw/" class="btnLink">
+								<div class="button button-login-twitter imgover">twitterアカウントでログイン<span class="icon icon-twitter"></span></div>
+							</a>
+						</li>
+					</ul>
+					<form action="/login" method="post" name="form1" class="ct-loginform">
+						<p>
+							<label>メールアドレス</label><br>
+							<input type="email" name="email" value="" ng-model="user.email" required>
+							<div class="errors display-none">
+								<p ng-show="form1.email.$error.required">メールアドレスは必須です。</p>
+								<p ng-show="form1.email.$error.email">メールアドレスが不正です。</p>
+							</div>
+						</p>
+						<p>
+							<label>パスワード</label><br>
+							<input name="password" type="password" value=""  ng-model="user.password" required>
+							<div class="errors display-none">
+								<p ng-show="form1.password.$error.required">パスワードは必須です。</p>
+							</div>
+						</p>
+						<p class="linkBlank">
+							<a href="#" ng-click="showPasswdRemind($event)">パスワードを忘れた方はこちら</a>
+						</p>
+						<ul class="btn">
+							<li>
+								<a href="#" ng-click="login($event)" class="btnLink">
+									<div class="button button-login imgover">ログイン<span class="icon icon-login"></span></div>
+								</a>
+							</li>
+							<li>
+								<a href="/login/register/" class="btnLink">
+									<div class="button button-register imgover">新規登録<span class="icon icon-register"></span></div>
+								</a>
+							</li>
+						</ul>
+					</form>
+				</div>
+			</div>
+		</div>
+		<div id="passwdRemind" class="display-none">
+			<div class="boxInner">
+				<form action="/login" method="post" name="form2">
+				<p class="txtCenter">
+					<label>
+						登録時のメールアドレスを入力してください。<br>
+						<input type="email" name="email" value="" ng-model="passwordRemind.email" required>
+					</label>
+					<div class="errors display-none">
+						<p ng-show="form2.email.$error.required">メールアドレスは必須です。</p>
+						<p ng-show="form2.email.$error.email">メールアドレスが不正です。</p>
+					</div>
+				</p>
+				<a href="#" class="sendMail btnLink">
+					<div class="button button-send imgover">送信<span class="icon icon-register"></span></div>
+				</a>
+				</form>
+			</div>
+		</div>
+	</div>
+
+<% }; %>
+<% include ../layout %>
+

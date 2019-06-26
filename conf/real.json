@@ -1,0 +1,108 @@
+{
+	"piddir": "/usr/local/node/pids/phomix",
+	"mongodb": {
+		"hostname": "localhost",
+		"database": "phomix",
+		"schemas": [
+			{"user": {
+				"name": "String",
+				"password": "String",
+				"email": "String",
+				"introduction": "String",
+				"imageId": "Object",
+				"mailChkFlg": "Boolean",
+				"accessToken": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"user_sns": {
+				"userId": "String",
+				"snsType": "String",
+				"snsId": "String",
+				"snsName": "String",
+				"accessToken": "String",
+				"accessSecret": "String"
+			}},
+			{"image": {
+				"userId": "String",
+				"displayFlg": "Boolean",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"post": {
+				"userId": "String",
+				"imageId": "Object",
+				"title": "String",
+				"text": "String",
+				"tagId": "Object",
+				"displayFlg": "Boolean",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"tag": {
+				"userId": "String",
+				"name": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"user_log": {
+				"userId": "Object",
+				"kind": "String",
+				"type": "String",
+				"time": "Date",
+				"data": {}
+			}},
+			{"admin_user": {
+				"userId": "String",
+				"password": "String",
+				"name": "String",
+				"registTime": "Date",
+				"updateTime": "Date",
+				"deleteFlg": "Boolean"
+			}},
+			{"admin_oplog": {
+				"name": "String",
+				"type": "String",
+				"ip": "String",
+				"time": "Date",
+				"data": {}
+			}}
+		]
+
+	},
+	"thumbDir": "./public/thumb/",
+	"app": {
+		"host" : "http://phomix.ise-web.com/",
+		"title" : "Phomix",
+		"description" : "フォト共有アプリ",
+		"port": "3002",
+		"oauth": {
+			"twitter": {
+				"consumerKey" : "lYCXahQoTfXthuWGK4vQ",
+				"consumerSecret" : "LPmjf0ri2FTDrS82411215MPh9WLvjegJp8dcQ",
+				"callbackUrl" : "http://localhost:3000/auth/twitter/callback/"
+			},
+			"facebook": {
+				"appKey" : "193020610829027",
+				"secretKey" : "1cb8bb6958ed1d7dc96e71803d872b0e",
+				"callbackUrl" : "http://localhost:3000/auth/fb/callback/"
+			}
+		},
+		"scripts": [
+			"/js/phomix.js"
+		]
+	},
+	"admin": {
+		"host" : "http://phomix.ise-web.com/",
+		"title" : "管理コンソール",
+		"description" : "Phomixの管理コンソールです。",
+		"port": "9002",
+		"sessionBase" : "KhJ7^1jG6x=?UxoAtN>$niEmY/J5?hVbqf71",
+		"nic" : "lo0"
+	}
+}
+

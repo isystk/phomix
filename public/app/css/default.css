@@ -1,0 +1,125 @@
+@charset "utf-8";
+
+/*** colorTown CSS Document *********************************
+
+	default.css
+
+*************************************************************/
+
+
+/* body
+-----------------------------------------------------*/
+
+body {
+background: #ffffff;
+font-family: 'メイリオ',Meiryo,Univers,'Hiragino Kaku Gothic Pro','ヒラギノ角ゴ Pro W3','ＭＳ Ｐゴシック',Helvetica,Arial,sans-serif;
+font-size:87.5%;
+line-height:1.6;
+color: #666666;
+word-break:break-all;
+word-wrap:break-word;
+position: relative;
+}
+
+
+/* link
+-----------------------------------------------------*/
+
+a:link{ text-decoration: none; color: #3399cc; }
+a:visited{ text-decoration: none; color: #3399cc; }
+a:hover{ text-decoration: underline; color: #3399cc; }
+a:active{ text-decoration: underline; color: #3399cc; }
+
+
+/* reset
+-----------------------------------------------------*/
+
+body,div,th,td,p,ul,ol,dl,dt,dd,img,form,h1,h2,h3,h4,h5,h6{
+margin: 0;
+padding: 0;
+}
+
+table{
+border-collapse: collapse;
+}
+
+h1,h2,h3,h4,h5,h6{
+font-size: 100%;
+font-weight: bold;
+}
+
+input,textarea,select{
+font-family: inherit;
+font-size: 100%;
+}
+
+th,td{
+text-align: left;
+}
+
+ul,ol{
+list-style-type: none;
+}
+
+em{
+font-style: normal;
+}
+
+hr{
+display: none;
+}
+
+img{
+border: 0;
+vertical-align: top;
+-ms-interpolation-mode: bicubic;
+}
+
+
+/* text-align
+-----------------------------------------------------*/
+
+.txtLeft{
+text-align: left;
+}
+
+.txtCenter{
+text-align: center;
+}
+
+.txtRight{
+text-align: right;
+}
+
+
+/* float
+-----------------------------------------------------*/
+
+.floatLeft{
+float: left;
+}
+
+.floatRight{
+float: right;
+}
+
+
+/* clearfix
+-----------------------------------------------------*/
+
+.clearfix:before,
+.clearfix:after{
+content: "";
+display: table;
+}
+
+.clearfix:after{
+clear: both;
+}
+
+.clearfix{
+zoom: 1;
+}
+
+
+
